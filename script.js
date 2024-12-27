@@ -1,3 +1,4 @@
+// 1
 const user = {
   mood: "happy",
   hobby: "backetball",
@@ -8,19 +9,23 @@ user.premium = "false";
 for (const key in user) {
   console.log(`${key}: ${user[key]}`);
 }
+const {mood, hobby, premium} = user
+console.log(mood, hobby, premium)
 
+// 2
 function countProps(obj) {
   return Object.keys(obj).length;
 }
 console.log(countProps(user));
 
+// 3
 const workers = {
-  Danya: 28,
-  Stas: 20,
-  Andrew: 15,
-  kirill: 27,
-  Ostap: 20,
-  Ivan: 25,
+  danya: 28,
+  stas: 20,
+  andrew: 15,
+  kiril: 27,
+  ostap: 20,
+  ivan: 25,
 };
 
 function findBestEmployee(employees) {
@@ -37,12 +42,15 @@ function findBestEmployee(employees) {
   return `${bestWorker}: ${max}`;
 }
 console.log(findBestEmployee(workers));
+const {danya, stas, andrew, kiril, ostap, ivan} = workers
+console.log(danya, stas, andrew, kiril, ostap, ivan)
 
+// 4
 const salary = {
   Danya: 15600,
   Stas: 20000,
   Andrew: 17500,
-  kirill: 19000,
+  Kiril: 19000,
   Ostap: 25000,
   Ivan: 24500,
 };
@@ -57,7 +65,10 @@ function countTotalSalary(employees) {
   return totalSalary;
 }
 console.log(countTotalSalary(salary));
+const {Danya, Stas, Andrew, Kiril, Ostap, Ivan} = salary
+console.log(Danya, Stas, Andrew, Kiril, Ostap, Ivan)
 
+// 5
 const friends = [
   { name: "Mango", hobby: "programming" },
   { name: "Kiwi", hobby: "football" },
@@ -74,6 +85,7 @@ function getAllPropValues(arr, prop) {
 }
 console.log(getAllPropValues(friends, "name"));
 
+// 6
 const vegetables = [
   { name: "Tomato", price: 150, value: 10 },
   { name: "Cucumber", price: 135, value: 15 },
